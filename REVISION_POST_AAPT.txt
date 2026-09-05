@@ -1,0 +1,21 @@
+FOTOBRA GPS - REVISION POST ERROR AAPT
+
+XML revisados: 11
+Kotlin revisados: 7
+Errores XML sintácticos: ninguno
+Delimitadores Kotlin: OK
+
+preference_app_namespace: OK
+simple_summary_app_attr: OK
+bad_android_attr_absent: OK
+xml_well_formed: OK
+compileSdk_36: OK
+targetSdk_35: OK
+agp_8_10_1: OK
+camera_explicit_surface_provider: OK
+background_edittext_read_removed: OK
+gps_permissions: OK
+version_1_0_1: OK
+
+El error android:useSimpleSummaryProvider fue eliminado.
+La compilación física final debe confirmarse en GitHub Actions.

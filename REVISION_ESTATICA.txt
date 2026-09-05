@@ -1,0 +1,26 @@
+FOTOBRA GPS - REVISION ESTATICA
+
+Archivos Kotlin: 7
+Archivos XML: 11
+Balance básico: OK
+
+main_layout: OK
+gallery_layout: OK
+item_layout: OK
+camera_permission: OK
+gps_fine: OK
+gps_coarse: OK
+camerax_1_6_2: OK
+location_21_4_0: OK
+package_name: OK
+workflow: OK
+
+Dependencias técnicas elegidas:
+- Android Gradle Plugin 8.9.2
+- Gradle 8.11.1
+- compileSdk/targetSdk 35
+- Java 17
+- CameraX 1.6.2
+- Google Play Services Location 21.4.0
+
+La compilación física final debe confirmarse en GitHub Actions.

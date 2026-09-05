@@ -1,0 +1,51 @@
+FOTOBRA GPS — REVISION API 37.0
+
+PRE-FLIGHT 2026 OK
+- AGP 9.4.0
+- KGP 2.4.10
+- Kotlin integrado AGP 9
+- Sin kotlin-android plugin
+- compileSdk 37.0
+- targetSdk 37
+- Java 17
+- buildToolsVersion 37.0.0
+- Core KTX 1.19.0
+- AppCompat 1.8.0
+- Activity 1.13.0
+- Lifecycle 2.11.0
+- Material 1.14.0
+- CameraX 1.6.2
+- GPS 21.4.0
+- Exif 1.4.2
+- Gradle 9.6.0
+- Checkout v6
+- Setup Java v6
+- Setup Gradle v6
+- Upload Artifact v7
+- Build Tools 37.0.0
+- Android Platform 37.0
+- XML revisados: 11
+
+XML: OK
+Kotlin: OK
+
+preflight: OK
+compileSdk_release_37: OK
+compileSdk_minor_0: OK
+targetSdk_37: OK
+buildToolsVersion_37_0_0: OK
+sdkmanager_platform_37_0: OK
+sdkmanager_buildtools_37_0_0: OK
+directory_check_platform_37_0: OK
+agp_9_4_0: OK
+gradle_9_6_0: OK
+kotlin_2_4_10: OK
+core_1_19_0: OK
+camera_1_6_2: OK
+gps_21_4_0: OK
+xml_valid: OK
+kotlin_delimiters: OK
+version_1_2_1: OK
+
+Corrección principal: sdkmanager usa platforms;android-37.0.
+La compilación APK real se confirma en GitHub Actions.

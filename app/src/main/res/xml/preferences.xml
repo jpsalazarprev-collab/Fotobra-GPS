@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.preference.PreferenceCategory android:title="Marca Fotobra GPS">
+
+        <androidx.preference.EditTextPreference
+            android:key="brand_text"
+            android:title="Nombre de marca"
+            android:defaultValue="Fotobra GPS"
+            app:useSimpleSummaryProvider="true" />
+
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="show_time"
+            android:title="Mostrar hora"
+            android:defaultValue="true" />
+
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="show_date"
+            android:title="Mostrar fecha"
+            android:defaultValue="true" />
+
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="show_address"
+            android:title="Mostrar dirección"
+            android:defaultValue="true" />
+
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="show_gps"
+            android:title="Mostrar GPS"
+            android:defaultValue="true" />
+
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="show_note"
+            android:title="Mostrar nota"
+            android:defaultValue="true" />
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory android:title="Captura">
+
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="save_original"
+            android:title="Guardar también foto original"
+            android:defaultValue="false" />
+
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="high_accuracy"
+            android:title="GPS de alta precisión"
+            android:defaultValue="true" />
+    </androidx.preference.PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

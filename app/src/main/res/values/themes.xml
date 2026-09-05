@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FotobraGPS" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/fotobra_black</item>
+        <item name="colorPrimaryVariant">@color/fotobra_black</item>
+        <item name="colorSecondary">@color/fotobra_yellow</item>
+        <item name="android:statusBarColor">@color/fotobra_black</item>
+        <item name="android:navigationBarColor">@color/fotobra_black</item>
+        <item name="android:fontFamily">sans</item>
+    </style>
+</resources>

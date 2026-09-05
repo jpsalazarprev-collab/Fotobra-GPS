@@ -1,0 +1,15 @@
+FOTOBRA GPS - REVISION KOTLIN 2.3
+
+Archivos Kotlin revisados: 7
+Delimitadores: OK
+
+kotlin_plugin_2_3_20: OK
+agp_8_10_1: OK
+compileSdk_36: OK
+targetSdk_35: OK
+location_21_4_0: OK
+camerax_1_6_2: OK
+workflow_kotlin_check: OK
+version_1_0_2: OK
+
+La compilación física final debe confirmarse en GitHub Actions.

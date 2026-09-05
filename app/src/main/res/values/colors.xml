@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fotobra_black">#101010</color>
+    <color name="fotobra_dark">#202020</color>
+    <color name="fotobra_yellow">#FFC107</color>
+    <color name="fotobra_white">#FFFFFF</color>
+    <color name="fotobra_gray">#B7B7B7</color>
+    <color name="fotobra_teal">#0F766E</color>
+</resources>

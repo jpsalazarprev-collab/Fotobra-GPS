@@ -1,0 +1,29 @@
+FOTOBRA GPS - REVISION INTEGRAL v8
+
+Preflight:
+PRE-FLIGHT OK
+- AGP 8.10.1
+- Kotlin 2.3.21
+- compileSdk 36
+- targetSdk 35
+- CameraX 1.6.2
+- GPS 21.4.0
+- XML revisados: 11
+
+build.gradle.kts llaves balanceadas: OK
+build.gradle.kts paréntesis balanceados: OK
+
+legacy_kotlinOptions_absent: OK
+legacy_jvmTarget_string_absent: OK
+compilerOptions_present: OK
+JvmTarget_import_present: OK
+JvmTarget_JVM17_present: OK
+kotlin_2_3_21: OK
+agp_8_10_1: OK
+compileSdk_36: OK
+targetSdk_35: OK
+gps_21_4_0: OK
+camerax_1_6_2: OK
+version_1_0_4: OK
+
+La compilación física final se confirma en GitHub Actions.

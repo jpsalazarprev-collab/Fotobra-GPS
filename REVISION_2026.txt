@@ -1,0 +1,30 @@
+FOTOBRA GPS — REVISION STACK 2026
+
+PRE-FLIGHT 2026 OK
+- AGP 9.4.0
+- KGP 2.4.10
+- Kotlin integrado AGP 9
+- Sin kotlin-android plugin
+- compileSdk 36
+- targetSdk 36
+- Java 17
+- Core KTX 1.19.0
+- AppCompat 1.8.0
+- Activity 1.13.0
+- Lifecycle 2.11.0
+- Material 1.14.0
+- CameraX 1.6.2
+- GPS 21.4.0
+- Exif 1.4.2
+- Gradle 9.6.0
+- Checkout v6
+- Setup Java v6
+- Setup Gradle v6
+- Upload Artifact v7
+- Build Tools 36
+- XML revisados: 11
+
+XML: OK
+Kotlin delimiters: OK
+
+Nota: la compilación APK final debe confirmarse en GitHub Actions.

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fotobra GPS</string>
+    <string name="capture">Tomar foto</string>
+    <string name="gallery">Galería</string>
+    <string name="settings">Ajustes</string>
+    <string name="note_hint">Nota / proyecto / frente</string>
+</resources>

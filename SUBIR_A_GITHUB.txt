@@ -1,0 +1,17 @@
+FOTOBRA GPS - PASOS GITHUB
+
+1. Descomprime Fotobra_GPS_Kotlin_GitHub.zip.
+2. Sube TODO el contenido del proyecto a GitHub.
+3. Si Windows oculta `.github`:
+   GitHub > Add file > Create new file
+   nombre: .github/workflows/build-apk.yml
+   copia el contenido del workflow del proyecto.
+4. Commit changes.
+5. Actions.
+6. Build Fotobra GPS APK.
+7. Run workflow.
+8. Cuando esté verde, descarga `Fotobra-GPS-APK`.
+9. Dentro estará `Fotobra-GPS.apk`.
+
+Este proyecto NO usa Flutter.
+Es Kotlin Android nativo.

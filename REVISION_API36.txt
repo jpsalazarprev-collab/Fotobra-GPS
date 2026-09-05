@@ -1,0 +1,22 @@
+FOTOBRA GPS - REVISION API 36
+
+Archivos Kotlin revisados: 7
+Balance básico Kotlin: OK
+
+agp_8_10_1: OK
+compileSdk_36: OK
+targetSdk_35: OK
+workflow_api36: OK
+workflow_gradle_8_11_1: OK
+camera_1_6_2: OK
+java17: OK
+
+Configuración final:
+AGP: 8.10.1
+Gradle: 8.11.1
+Java: 17
+compileSdk: 36
+targetSdk: 35
+CameraX: 1.6.2
+
+La compilación APK real se confirma en GitHub Actions.
