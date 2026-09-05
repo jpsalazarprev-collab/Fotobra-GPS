@@ -1,1 +1,89 @@
+name: Build Fotobra GPS APK 2026
 
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar proyecto
+        uses: actions/checkout@v6
+
+      - name: Instalar Java 17
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Instalar Gradle 9.6.0
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: "9.6.0"
+
+      - name: Verificar herramientas 2026
+        run: |
+          java -version
+          gradle --version
+          echo "ANDROID_HOME=$ANDROID_HOME"
+
+      - name: Instalar Android SDK 37.0
+        run: |
+          SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
+          yes | "$SDKMANAGER" --licenses >/dev/null || true
+
+          echo "Buscando paquetes Android 37 publicados..."
+          "$SDKMANAGER" --list | grep -E "platforms;android-37\.0|build-tools;37\.0\.0" || true
+
+          "$SDKMANAGER"             "platforms;android-37.0"             "build-tools;37.0.0"
+
+      - name: Verificar Android API 37.0
+        run: |
+          test -d "$ANDROID_HOME/platforms/android-37.0"
+          test -d "$ANDROID_HOME/build-tools/37.0.0"
+          echo "Android API 37.0 y Build Tools 37.0.0 instalados"
+          grep -n "compileSdk" app/build.gradle.kts
+          grep -n "targetSdk" app/build.gradle.kts
+
+      - name: Revisión integral previa
+        run: python scripts/preflight.py
+
+      - name: Mostrar stack 2026
+        run: |
+          echo "AGP:"
+          grep -n 'com.android.application' build.gradle.kts
+          echo "Kotlin KGP:"
+          grep -n 'kotlin-gradle-plugin' build.gradle.kts
+          echo "Dependencias:"
+          grep -nE 'core-ktx|appcompat|activity-ktx|lifecycle-runtime|material:|camera-core|play-services-location' app/build.gradle.kts
+
+      - name: Verificar metadata AAR
+        run: gradle :app:checkDebugAarMetadata --stacktrace
+
+      - name: Compilar Kotlin
+        run: gradle :app:compileDebugKotlin --stacktrace
+
+      - name: Compilar APK limpio
+        run: gradle clean :app:assembleDebug --stacktrace
+
+      - name: Lint Android informativo
+        continue-on-error: true
+        run: gradle :app:lintDebug
+
+      - name: Preparar APK
+        run: |
+          test -f app/build/outputs/apk/debug/app-debug.apk
+          cp app/build/outputs/apk/debug/app-debug.apk Fotobra-GPS-2026.apk
+          ls -lh Fotobra-GPS-2026.apk
+
+      - name: Subir APK
+        uses: actions/upload-artifact@v7
+        with:
+          name: Fotobra-GPS-2026-APK
+          path: Fotobra-GPS-2026.apk
+          if-no-files-found: error
+          retention-days: 30
